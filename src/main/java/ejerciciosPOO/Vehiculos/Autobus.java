@@ -23,10 +23,16 @@ public class Autobus extends Vehiculo {
     public int getNumeroPlazas() {
         return numeroPlazas;
     }
+    public void consultarDatos(){
+        System.out.println("Matricula del autobus: " + this.getMatricula() + "\nModelo del autobus: " + this.getModelo() + 
+                "\nPotencia del autobus: " + this.getPotenciaCV() + "\nNumero de plazas: " + this.getNumeroPlazas());
+    }
     
 
     public static void main(String args[]) {
         Autobus autobusSeleccionColombia;
-        
+        autobusSeleccionColombia = new Autobus("Autobus-324423", "Modelo-at-3000", "4000w");
+        autobusSeleccionColombia.setNumeroPlazas(35);
+        autobusSeleccionColombia.consultarDatos();
     }
 }
